@@ -22,7 +22,10 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - uses: gradle/actions/setup-gradle@v6
+      with:
+        cache-provider: basic
     - name: Build Android
+      working-directory: ./app
       run: ./android/gradlew assembleDebug
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
