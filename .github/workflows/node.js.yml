@@ -20,6 +20,7 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
+    - run: java --version
     - uses: actions/checkout@v4
     - uses: gradle/actions/setup-gradle@v6
       with:
